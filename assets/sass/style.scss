@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,900&display=swap');
+$font-family-base: 'Roboto', sans-serif;
+
+$primary: #282630;
+$secondary: #3c2442;
+$success: #9de6d1;
+$goldenbtn: rgb(255, 255, 0);
+$pointeron: rgb(168, 168, 10); 
+
+$theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "goldenbtn": $goldenbtn,
+    "pointeron": $pointeron
+);
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+$tcolor: white;
+
+.basecard{
+    background-color: $primary;
+    color: $tcolor;
+}
+
+.micard {
+    width: 20em;
+    @extend .card;
+    @extend .basecard
+}
+
+.contenidocard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .titulo{
+        font-size: 2.5em;
+        font-weight: 600;
+    }
+
+}
+
+.boton{
+    background-color: $pointeron;
+    color: $success;
+    width: 50%;
+    font-weight: 900;
+    font-size: 1.5em; 
+}
+
+.btn{
+    @extend .boton;
+
+    &:hover{
+        background-color: $goldenbtn;
+        color: $secondary;
+    }
+}
